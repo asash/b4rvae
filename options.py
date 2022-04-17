@@ -1,8 +1,8 @@
-from templates import set_template
-from datasets import DATASETS
-from dataloaders import DATALOADERS
-from models import MODELS
-from trainers import TRAINERS
+from .templates import set_template
+from .datasets import DATASETS
+from .dataloaders import DATALOADERS
+from .models import MODELS
+from .trainers import TRAINERS
 
 import argparse
 

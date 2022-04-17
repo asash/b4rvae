@@ -1,10 +1,10 @@
 import torch
 
-from options import args
-from models import model_factory
-from dataloaders import dataloader_factory
-from trainers import trainer_factory
-from utils import *
+from .options import args
+from .models import model_factory
+from .dataloaders import dataloader_factory
+from .trainers import trainer_factory
+from .utils import *
 
 
 def train():

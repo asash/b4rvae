@@ -1,5 +1,5 @@
 from .utils import *
-from config import RAW_DATASET_ROOT_FOLDER
+from ..config import RAW_DATASET_ROOT_FOLDER
 
 import numpy as np
 import pandas as pd
