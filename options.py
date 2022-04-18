@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description='RecPlay')
 # Top Level
 ################
 parser.add_argument('--mode', type=str, default='train', choices=['train'])
-parser.add_argument('--template', type=str, default=None)
+parser.add_argument('--template', type=str, default="train_bert")
 
 ################
 # Test
@@ -23,7 +23,7 @@ parser.add_argument('--test_model_path', type=str, default=None)
 ################
 # Dataset
 ################
-parser.add_argument('--dataset_code', type=str, default='ml-20m', choices=DATASETS.keys())
+parser.add_argument('--dataset_code', type=str, default='ml-1m', choices=DATASETS.keys())
 parser.add_argument('--min_rating', type=int, default=4, help='Only keep ratings greater than equal to this value')
 parser.add_argument('--min_uc', type=int, default=5, help='Only keep users with more than min_uc ratings')
 parser.add_argument('--min_sc', type=int, default=0, help='Only keep items with more than min_sc ratings')
@@ -47,11 +47,11 @@ parser.add_argument('--test_batch_size', type=int, default=64)
 parser.add_argument('--train_negative_sampler_code', type=str, default='random', choices=['popular', 'random'],
                     help='Method to sample negative items for training. Not used in bert')
 parser.add_argument('--train_negative_sample_size', type=int, default=100)
-parser.add_argument('--train_negative_sampling_seed', type=int, default=None)
+parser.add_argument('--train_negative_sampling_seed', type=int, default=31337)
 parser.add_argument('--test_negative_sampler_code', type=str, default='random', choices=['popular', 'random'],
                     help='Method to sample negative items for evaluation')
 parser.add_argument('--test_negative_sample_size', type=int, default=100)
-parser.add_argument('--test_negative_sampling_seed', type=int, default=None)
+parser.add_argument('--test_negative_sampling_seed', type=int, default=31337)
 
 ################
 # Trainer
@@ -86,7 +86,7 @@ parser.add_argument('--anneal_cap', type=float, default=0.2, help='Upper limit o
 # Model
 ################
 parser.add_argument('--model_code', type=str, default='bert', choices=MODELS.keys())
-parser.add_argument('--model_init_seed', type=int, default=None)
+parser.add_argument('--model_init_seed', type=int, default=31337)
 # BERT #
 parser.add_argument('--bert_max_len', type=int, default=None, help='Length of sequence for bert')
 parser.add_argument('--bert_num_items', type=int, default=None, help='Number of total items')
