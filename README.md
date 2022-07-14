@@ -1,3 +1,6 @@
+This is a fork of https://github.com/jaywonchung/BERT4Rec-VAE-Pytorch, converted to a library format. 
+
+
 # Introduction
 
 This repository implements models from the following two papers:
